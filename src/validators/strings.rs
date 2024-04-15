@@ -1,15 +1,5 @@
-use crate::validation::validation_error::ValidationError;
-use crate::validation::validation_result::ValidationResult;
-
-pub trait ValidationStarter<T> {
-    fn must(self) -> ValidationResult<T>;
-}
-
-impl<T> ValidationStarter<T> for T {
-    fn must(self) -> ValidationResult<T> {
-        Ok(self)
-    }
-}
+use crate::utils::validation_error::ValidationError;
+use crate::utils::validation_result::ValidationResult;
 
 pub trait StringValidator {
     fn be_not_empty(self) -> ValidationResult<String>;

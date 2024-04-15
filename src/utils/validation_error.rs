@@ -1,7 +1,7 @@
 use thiserror::Error;
 
 #[derive(Error, Debug, PartialEq)]
-#[error("A validation error occurred: {0}")]
+#[error("A utils error occurred: {0}")]
 pub struct ValidationError(String);
 
 impl ValidationError {
