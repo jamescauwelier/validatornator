@@ -1,4 +1,4 @@
-use crate::prelude::{ValidationError, ValidationHelper, ValidationResult};
+use crate::prelude::{ValidationHelper, ValidationResult};
 
 pub trait USizeValidator {
     fn be_larger_than(self, limit: usize) -> ValidationResult<usize>;
